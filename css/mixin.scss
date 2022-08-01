@@ -1,4 +1,4 @@
-$breakpoints: ( "sm": 368px, "md": 576px, "lg": 768px, "xl": 992px, "xxl": 1280px, );
+$breakpoints: ( "sm": 368px, "md": 767px, "lg": 768px, "xl": 1024px, "xxl": 1366px, );
 @mixin mq($width, $type: max) {
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);
