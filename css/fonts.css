@@ -1,6 +1,6 @@
 /* montserrat-regular - latin_cyrillic */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/montserrat-v25-latin_cyrillic-regular.eot");
@@ -11,7 +11,7 @@
 
 /* montserrat-500 - latin_cyrillic */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/montserrat-v25-latin_cyrillic-500.eot");
@@ -22,7 +22,7 @@
 
 /* montserrat-700 - latin_cyrillic */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/montserrat-v25-latin_cyrillic-700.eot");
@@ -33,12 +33,21 @@
 
 /* montserrat-800 - latin_cyrillic */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
   src: url("../fonts/montserrat-v25-latin_cyrillic-800.eot");
   /* IE9 Compat Modes */
   src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-800.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-800.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-800.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-800.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-800.svg#Montserrat") format("svg");
   /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/ProximaNova-Bold.eot") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.woff2") format("woff2");
+  /* IE6-IE8 */
 }
 /*# sourceMappingURL=fonts.css.map */
