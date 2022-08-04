@@ -630,6 +630,9 @@ body {
 .specialists {
     padding: 120px 0px;
     width: 100%;
+    @include mq(md) {
+        padding: 60px 0px;
+    }
     &__inner {
         max-width: 1550px;
         width: 100%;
@@ -730,6 +733,9 @@ body {
                     height: 47px;
                 }
             }
+            @include mq(sm) {
+                left: 25px;
+            }
         }
         /* Стрелка вправо */
         & .slick-next {
@@ -759,6 +765,9 @@ body {
             display: flex;
             justify-content: center;
             margin-top: 80px;
+            @include mq(md) {
+                margin-top: 40px;
+            }
         }
         & li {
             list-style: none;
@@ -803,10 +812,7 @@ body {
                 width: 165px;
                 height: 165px;
             }
-            @include mq(xl) {
-                font-size: 20px;
-            }
-            @include mq(sm) {
+            @include mq(md) {
                 width: 210px;
                 height: 210px;
             }
@@ -911,36 +917,103 @@ body {
 .centers {
     width: 100%;
     &__inner {
-        max-width: 1520px;
+        max-width: 1550px;
         width: 100%;
         margin: 0 auto;
-        & {
-            @include mq(xl) {
-                display: flex;
-            }
-        }
+        padding: 0 15px;
     }
     &__top {
         max-width: 1520px;
         width: 100%;
-        // & {
-        //     @include mq(xl) {
-        //         display: flex;
-        //         flex-direction: column-reverse;
-        //     }
-        // }
+        display: flex;
+        margin-bottom: 30px;
     }
-    &__items {
+    &__items-top {
         max-width: inherit;
         width: inherit;
         display: flex;
         justify-content: center;
+    }
+    &__items-bottom {
+        max-width: inherit;
+        width: inherit;
+        display: flex;
         margin-bottom: 30px;
     }
     &__img {
-        max-width: 100%;
-        height: 100%;
+        max-width: 744px;
+        width: 100%;
+        min-height: 448px;
         background-size: cover;
+        &:not(:last-child) {
+            margin-right: 28px;
+            @include mq(md) {
+                margin-right: 0px;
+                margin-bottom: 24px;
+            }
+        }
+        & {
+            @include mq(xxl) {
+                max-width: 525px;
+                width: 100%;
+                min-height: 448px;
+            }
+            @include mq(xl) {
+                max-width: 265px;
+                width: 100%;
+                min-height: 191px;
+            }
+            @include mq(lg) {
+                max-width: 197px;
+                width: 100%;
+                min-height: 141px;
+                margin-right: 28px;
+            }
+            @include mq(md) {
+                max-width: 327px;
+                width: 100%;
+                min-height: 234px;
+                margin-right: 0px;
+            }
+        }
+    }
+    &__img-top {
+        margin-right: 30px;
+        @include mq(xl) {
+            display: none;
+        }
+        & {
+            @include mq(xxl) {
+                max-width: 525px;
+                width: 100%;
+                min-height: 448px;
+            }
+        }
+    }
+    &__img-bottom {
+        display: none;
+        & {
+            @include mq(xl) {
+                display: block;
+                max-width: 265px;
+                width: 100%;
+                min-height: 191px;
+                margin-right: 28px;
+            }
+            @include mq(lg) {
+                max-width: 197px;
+                width: 100%;
+                min-height: 141px;
+                margin-right: 28px;
+            }
+            @include mq(md) {
+                max-width: 327px;
+                width: 100%;
+                min-height: 234px;
+                margin-right: 0px;
+                margin-bottom: 24px;
+            }
+        }
     }
     &__description {
         max-width: 745px;
@@ -948,10 +1021,17 @@ body {
         display: flex;
         flex-direction: column;
         & {
-            // @include mq(xxl) {
-            //     max-width: 525px;
-            //     width: 100%;
-            // }
+            @include mq(xxl) {
+                max-width: 525px;
+                width: 100%;
+            }
+            @include mq(xl) {
+                max-width: 850px;
+                width: 100%;
+            }
+            @include mq(md) {
+                align-items: center;
+            }
         }
     }
     &__title {
@@ -967,6 +1047,11 @@ body {
             }
             @include mq(xl) {
                 font-size: 50px;
+            }
+            @include mq(md) {
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 32px;
             }
             @include mq(sm) {
                 font-size: 26px;
@@ -987,6 +1072,9 @@ body {
             @include mq(xl) {
                 font-size: 14px;
             }
+            @include mq(md) {
+                margin-bottom: 24px;
+            }
         }
     }
     &__button-show-address {
@@ -1001,6 +1089,20 @@ body {
         &:hover {
             background-color: #ffa300;
         }
+        & {
+            @include mq(xxl) {
+                font-size: 18px;
+            }
+            @include mq(xl) {
+                padding: 14px 30px 14px 30px;
+            }
+            @include mq(md) {
+                width: 327px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
     &__button-text {
         font-family: "Montserrat", sans-serif;
@@ -1012,25 +1114,18 @@ body {
     &__bottom {
         max-width: 1550px;
         width: 100%;
-    }
-}
-
-.img-w {
-    width: 775px;
-    min-height: 478px;
-    padding: 0 15px;
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
-    & {
-        // @include mq(xxl) {
-        //     max-width: 525px;
-        //     width: 100%;
-        // }
+        display: flex;
+        & {
+            @include mq(md) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
 }
 
 .colored-blocks {
+    padding: 100px 0px;
     width: 100%;
     &__inner {
         max-width: 1430px;
@@ -1067,4 +1162,10 @@ body {
             width: 100%;
         }
     }
+}
+
+.app {
+    width: 500px;
+    height: 500px;
+    color: red;
 }
