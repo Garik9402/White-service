@@ -1,15 +1,6 @@
 @import "reset.scss";
 @import "fonts.scss";
 @import "mixin.scss";
-// @include mq(xxl) {}
-// @include mq(xl) {}
-// @include mq(lg) {}
-// @include mq(md) {}
-// @include mq(sm) {}
-body {
-    //   background: #E5E5E5;
-}
-
 .m-menu {
     position: absolute;
     padding: 20px 0px 0px 0px;
@@ -434,7 +425,7 @@ body {
 
 .description {
     width: 100%;
-    min-height: 930px;
+    min-height: 800px;
     height: 100%;
     background-image: url(../images/description-img/description-img.jpg);
     background-repeat: no-repeat;
@@ -1234,6 +1225,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include mq(xxl) {}
     }
 }
 
