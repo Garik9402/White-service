@@ -434,11 +434,34 @@ body {
 
 .description {
     width: 100%;
+    min-height: 930px;
+    height: 100%;
+    background-image: url(../images/description-img/description-img.jpg);
+    background-repeat: no-repeat;
+    background-position-x: calc(50% + 30vw);
+    @include mq(xxxl) {
+        background-position-x: calc(50% + 40vw);
+    }
+    @include mq(xxl) {
+        background-position-x: calc(50% + 40vw);
+    }
+    @include mq(xl) {
+        background-image: url(../images/description-img/desc.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(50% + 30vw);
+    }
+    @include mq(md) {
+        background-repeat: no-repeat;
+        background-size: 21%;
+        background-position-x: calc(50% + 35vw);
+        background-position-y: 10%;
+    }
     &__inner {
         position: relative;
-        max-width: 1920px;
+        max-width: 1550px;
         width: 100%;
         margin: 0 auto;
+        padding: 0 15px;
         display: flex;
         overflow: hidden;
     }
@@ -447,14 +470,26 @@ body {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 0 15px;
         margin: 0 auto;
         overflow: visible;
+        @include mq(md) {
+            flex-direction: column;
+        }
     }
     &__column {
-        max-width: 1000px;
+        max-width: 815px;
         width: 100%;
         padding: 80px 0px 120px 0px;
+        @include mq(xxl) {
+            max-width: 679px;
+        }
+        @include mq(xl) {
+            max-width: 480px;
+        }
+        @include mq(md) {
+            max-width: 679px;
+            padding: 30px 0px 60px 0px;
+        }
     }
     &__top {}
     &__title {
@@ -469,6 +504,9 @@ body {
         }
         @include mq(xl) {
             font-size: 50px;
+        }
+        @include mq(md) {
+            width: 260px;
         }
         @include mq(sm) {
             font-size: 26px;
@@ -487,13 +525,16 @@ body {
         @include mq(xl) {
             font-size: 16px;
         }
+        @include mq(md) {
+            width: 260px;
+        }
         @include mq(sm) {
             font-size: 14px;
         }
     }
     &__middle {
         margin-bottom: 40px;
-        height: 79px;
+        display: flex;
     }
     &__bottom {
         max-width: 816px;
@@ -507,13 +548,37 @@ body {
         &:first-child {
             margin-bottom: 32px;
         }
+        @include mq(xxl) {
+            flex-direction: column;
+        }
+        @include mq(md) {
+            max-width: 370px;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     &__items {
         max-width: 394px;
         width: 100%;
-        height: 70px;
         display: flex;
         align-items: center;
+        &:not(:last-child) {
+            @include mq(xxl) {
+                margin-bottom: 32px;
+                @include mq(md) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        @include mq(xl) {
+            max-width: 280px;
+        }
+        @include mq(md) {
+            flex-direction: column;
+            align-items: center;
+            max-width: 155px;
+        }
     }
     &__item-icon {
         max-width: 70px;
@@ -531,38 +596,45 @@ body {
         @include mq(xl) {
             font-size: 14px;
         }
-    }
-    &__img {
-        position: relative;
-        max-width: 976px;
-        width: 100%;
-        background: url(../images/description-img/description-img.jpg) no-repeat;
-        min-height: 1024px;
-        top: 0;
-        right: -170px;
+        @include mq(md) {
+            text-align: center;
+        }
     }
     &__statistics-w {
-        position: absolute;
+        position: relative;
         max-width: 690px;
         width: 100%;
+        padding: 0px 15px 100px 0px;
         display: flex;
+        flex-direction: column;
         justify-content: flex-end;
-        padding: 0px 15px 0px 0px;
-        bottom: 120px;
+        align-items: flex-end;
+        @include mq(xxl) {
+            padding-bottom: 400px;
+        }
+        @include mq(md) {
+            padding-bottom: 0px;
+            flex-direction: row;
+            justify-content: center;
+        }
     }
     &__statistics {
-        width: 464px;
-        height: 101px;
         background: #ffffff;
         box-shadow: 0px 10px 30px -6px rgba(35, 25, 4, 0.15);
         border-radius: 100px;
         padding: 20px 40px;
+        @include mq(xxl) {}
+        @include mq(xl) {
+            padding: 12px 22px 9px 22px;
+        }
+        @include mq(lg) {}
+        @include mq(md) {}
+        @include mq(sm) {}
     }
     &__statistics-inner {
-        width: 384px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        @include mq(xl) {}
     }
     &__statistics-count {
         font-family: "Proxima Nova", sans-serif;
@@ -573,16 +645,33 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        margin-right: 7px;
+        @include mq(xxl) {}
+        @include mq(xl) {
+            font-size: 28px;
+            line-height: 34px;
+        }
     }
-    &__statistics-smiley {}
+    &__statistics-smiley {
+        width: 60px;
+        height: 60px;
+        margin-right: 7px;
+        @include mq(xl) {
+            width: 40px;
+            height: 40px;
+        }
+    }
     &__statistics-text {
         width: 151px;
-        height: 48px;
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 20px;
         line-height: 120%;
         color: #000000;
+        @include mq(xl) {
+            font-size: 14px;
+            width: 110px;
+        }
     }
 }
 
@@ -600,8 +689,11 @@ body {
     @include mq(xl) {
         padding: 15px 30px 18px 30px;
     }
-    @include mq(sm) {
-        padding: 15px 48px 18px 48px;
+    @include mq(md) {
+        padding: 15px 20px 18px 20px;
+    }
+    @include mq(md) {
+        padding: 10px 15px 12px 15px;
     }
     &::before {
         content: "";
@@ -624,6 +716,9 @@ body {
         line-height: 120%;
         color: #ffffff;
         margin-left: 15px;
+        @include mq(sm) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -884,15 +979,11 @@ body {
             }
         }
     }
-    &__status {
+    &__status-w {
+        width: 296px;
         position: relative;
-        padding: 24px 16px 16px 16px;
+        padding: 24px 16px 16px 24px;
         background-color: #f6f6f6;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 120%;
-        color: #000000;
         border-radius: 20px;
         &::before {
             content: "";
@@ -903,6 +994,14 @@ body {
             top: -14px;
             left: 45%;
         }
+    }
+    &__status {
+        min-width: 264px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000000;
         & {
             @include mq(xl) {
                 font-size: 14px;
@@ -1162,10 +1261,4 @@ body {
             width: 100%;
         }
     }
-}
-
-.app {
-    width: 500px;
-    height: 500px;
-    color: red;
 }
