@@ -619,7 +619,7 @@
 
 @media only screen and (max-width: 1023px) {
   .description {
-    background-image: url(../images/description-img/desc.png);
+    background-image: url(../images/description-img/desc.jpg);
     background-repeat: no-repeat;
     background-position-x: calc(50% + 30vw);
   }
