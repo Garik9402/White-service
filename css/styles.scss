@@ -1252,6 +1252,9 @@
 .block {
   padding: 40px;
   border-radius: 20px;
+  @include mq(sm) {
+    padding: 20px;
+  }
   &--border-color-orange {
     border: 1px solid #ffa300;
   }

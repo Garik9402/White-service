@@ -1397,6 +1397,11 @@
   padding: 40px;
   border-radius: 20px;
 }
+@media only screen and (max-width: 376px) {
+  .block {
+    padding: 20px;
+  }
+}
 .block--border-color-orange {
   border: 1px solid #ffa300;
 }
