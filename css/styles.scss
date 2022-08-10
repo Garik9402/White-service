@@ -318,7 +318,7 @@
   }
   &__menu-list-item {
     position: relative;
-    &:not(:first-child)::after {
+    &::after {
       content: "";
       position: absolute;
       height: 28px;
@@ -481,6 +481,7 @@
     }
     @include mq(xl) {
       max-width: 480px;
+      padding: 50px 0px;
     }
     @include mq(md) {
       max-width: 679px;
@@ -734,9 +735,10 @@
 .specialists {
   padding: 120px 0px;
   width: 100%;
-  @include mq(md) {
+  @include mq(xl) {
     padding: 60px 0px;
   }
+
   &__inner {
     max-width: 1550px;
     width: 100%;
@@ -838,7 +840,6 @@
         }
       }
       @include mq(sm) {
-        left: 25px;
       }
     }
     /* Стрелка вправо */
@@ -903,7 +904,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 30px;
+  margin: 0 15px;
   &:last-child {
     @include mq(lg) {
       display: none;
@@ -1025,6 +1026,7 @@
 
 .centers {
   width: 100%;
+  padding-bottom: 40px;
   &__inner {
     max-width: 1550px;
     width: 100%;
@@ -1032,22 +1034,9 @@
     padding: 0 15px;
   }
   &__top {
-    max-width: 1520px;
+    max-width: inherit;
     width: 100%;
     display: flex;
-    margin-bottom: 30px;
-  }
-  &__items-top {
-    max-width: inherit;
-    width: inherit;
-    display: flex;
-    justify-content: center;
-  }
-  &__items-bottom {
-    max-width: inherit;
-    width: inherit;
-    display: flex;
-    margin-bottom: 30px;
   }
   &__img {
     max-width: 744px;
@@ -1056,9 +1045,12 @@
     background-size: cover;
     &:not(:last-child) {
       margin-right: 28px;
-      @include mq(md) {
-        margin-right: 0px;
-        margin-bottom: 24px;
+      @include mq(xl) {
+        margin-right: 10px;
+        @include mq(lg) {
+          margin-bottom: 24px;
+          margin-right: 0px;
+        }
       }
     }
     & {
@@ -1068,7 +1060,7 @@
         min-height: 448px;
       }
       @include mq(xl) {
-        max-width: 265px;
+        max-width: 240px;
         width: 100%;
         min-height: 191px;
       }
@@ -1107,7 +1099,7 @@
         max-width: 265px;
         width: 100%;
         min-height: 191px;
-        margin-right: 28px;
+        margin-right: 10px;
       }
       @include mq(lg) {
         max-width: 197px;
@@ -1137,6 +1129,7 @@
       @include mq(xl) {
         max-width: 850px;
         width: 100%;
+        margin-bottom: 30px;
       }
       @include mq(md) {
         align-items: center;
@@ -1224,56 +1217,10 @@
     max-width: 1550px;
     width: 100%;
     display: flex;
-    & {
-      @include mq(md) {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
-}
 
-.colored-blocks {
-  padding: 100px 0px;
-  width: 100%;
-  &__inner {
-    max-width: 1430px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @include mq(xxl) {
-    }
-  }
-}
-
-.block {
-  padding: 40px;
-  border-radius: 20px;
-  @include mq(sm) {
-    padding: 20px;
-  }
-  &--border-color-orange {
-    border: 1px solid #ffa300;
-  }
-  &--border-color-black {
-    border: 1px solid #000000;
-  }
-  &--border-color-gray {
-    border: 1px solid #9a9a9a;
-  }
-  &__text {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 140%;
-    max-width: 716px;
-    width: 100%;
-    &--width-small {
-      max-width: 448px;
-      width: 100%;
+    @include mq(md) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
